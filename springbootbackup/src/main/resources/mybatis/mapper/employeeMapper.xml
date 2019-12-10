@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.person.mapper.EmployeeMapper">
+
+    <!--<resultMap id="BaseResultMap" type="com.person.pojo.Employee">-->
+        <!--&lt;!&ndash; 用id属性来映射主键字段 &ndash;&gt;-->
+        <!--<id column="_id" jdbcType="int" property="id" />-->
+        <!--&lt;!&ndash; 用result属性来映射非主键字段 &ndash;&gt;-->
+        <!--<result column="lastName" jdbcType="VARCHAR" property="lastName" />-->
+        <!--<result column="gender" jdbcType="int" property="gender" />-->
+        <!--<result column="password" jdbcType="VARCHAR" property="password"/>-->
+    <!--</resultMap>-->
+
+    <select id="getEmpById" resultType="com.person.pojo.Employee">
+            SELECT * FROM employee WHERE id=#{id}
+     </select>
+
+    <!--登录查询-->
+    <select id="getLogin" resultType="com.person.pojo.Employee">
+        SELECT * FROM employee WHERE username= #{username}  AND  password = #{password}
+    </select>
+</mapper>
