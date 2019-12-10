@@ -1,0 +1,10 @@
+server:
+  port: 8082
+
+spring:
+  datasource:
+    username: root
+    password: rootAdmin
+    url: jdbc:mysql://127.0.0.1:3306/microservicereview?useUnicode=true&useSSL=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&serverTimezone=GMT%2B8
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
