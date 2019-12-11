@@ -6,7 +6,11 @@
 
   <groupId>com.person</groupId>
   <artifactId>springcloudbackup</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>common</module>
+  </modules>
 
   <name>Maven</name>
   <!-- FIXME change it to the project's website -->
@@ -22,6 +26,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <lombok.version>1.16.18</lombok.version>
   </properties>
 
   <build>
