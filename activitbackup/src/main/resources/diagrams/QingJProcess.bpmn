@@ -2,9 +2,9 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:tns="http://www.activiti.org/testm1580559154502" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" expressionLanguage="http://www.w3.org/1999/XPath" id="m1580559154502" name="" targetNamespace="http://www.activiti.org/testm1580559154502" typeLanguage="http://www.w3.org/2001/XMLSchema">
   <process id="myProcess_1" isClosed="false" isExecutable="true" processType="None">
     <startEvent id="vacation" name="vacationPro"/>
-    <userTask activiti:exclusive="true" id="UserTask1" name="提交申请"/>
-    <userTask activiti:exclusive="true" id="UserTask2" name="审批【部门审批】"/>
-    <userTask activiti:exclusive="true" id="UserTask3" name="审批【总经理】"/>
+    <userTask activiti:assignee="张三提交人" activiti:exclusive="true" id="UserTask1" name="提交申请"/>
+    <userTask activiti:assignee="李四部门经理" activiti:exclusive="true" id="UserTask2" name="审批【部门审批】"/>
+    <userTask activiti:assignee="王五总经理" activiti:exclusive="true" id="UserTask3" name="审批【总经理】"/>
     <endEvent id="_6" name="EndEvent"/>
     <sequenceFlow id="_7" sourceRef="vacation" targetRef="UserTask1"/>
     <sequenceFlow id="_8" sourceRef="UserTask1" targetRef="UserTask2"/>
@@ -43,28 +43,28 @@
           <dc:Bounds height="32.0" width="32.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7" sourceElement="_2" targetElement="_3">
+      <bpmndi:BPMNEdge bpmnElement="_7" id="BPMNEdge__7" sourceElement="vacation" targetElement="UserTask1">
         <di:waypoint x="266.0" y="82.0"/>
         <di:waypoint x="266.0" y="165.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="_3" targetElement="_4">
+      <bpmndi:BPMNEdge bpmnElement="_8" id="BPMNEdge__8" sourceElement="UserTask1" targetElement="UserTask2">
         <di:waypoint x="260.0" y="220.0"/>
         <di:waypoint x="260.0" y="250.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_9" id="BPMNEdge__9" sourceElement="_4" targetElement="_5">
+      <bpmndi:BPMNEdge bpmnElement="_9" id="BPMNEdge__9" sourceElement="UserTask2" targetElement="UserTask3">
         <di:waypoint x="252.5" y="305.0"/>
         <di:waypoint x="252.5" y="345.0"/>
         <bpmndi:BPMNLabel>
           <dc:Bounds height="0.0" width="0.0" x="0.0" y="0.0"/>
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10" sourceElement="_5" targetElement="_6">
+      <bpmndi:BPMNEdge bpmnElement="_10" id="BPMNEdge__10" sourceElement="UserTask3" targetElement="_6">
         <di:waypoint x="251.0" y="400.0"/>
         <di:waypoint x="251.0" y="465.0"/>
         <bpmndi:BPMNLabel>
