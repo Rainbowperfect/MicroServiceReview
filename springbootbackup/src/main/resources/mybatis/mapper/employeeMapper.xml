@@ -18,7 +18,17 @@
      </select>
 
     <!--登录查询-->
-    <select id="getLogin" resultType="com.person.pojo.Employee">
+    <select id="getLogin" resultType="com.person.pojo.Employee" >
         SELECT * FROM employee WHERE username= #{username}  AND  password = #{password}
+    </select>
+
+    <!--id查询员工列表-->
+    <select id="postEmpById" resultType="com.person.pojo.Employee">
+        select * from employee where id= #{id}
+    </select>
+
+    <!--模糊查询不区分大小写-->
+    <select id="slurQuery" resultType="com.person.pojo.Employee">
+        select  * from employee where  upper (lastName)  like  concat ('%',upper (#{lastName}),'%')
     </select>
 </mapper>

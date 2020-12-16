@@ -2,6 +2,8 @@ package com.person.mapper;
 
 import com.person.pojo.Employee;
 
+import java.util.List;
+
 /**
  * employee的增删改
  *
@@ -13,4 +15,8 @@ public interface EmployeeMapper {
     Employee getEmpById(Integer id);
 
     Employee getLogin(String username, String password);
+
+    List<Employee> postEmpById(Integer id);
+
+    List<Employee> slurQuery(String lastName);
 }

@@ -1,9 +1,6 @@
 package com.person;
 
-import org.activiti.engine.ProcessEngine;
-import org.activiti.engine.ProcessEngines;
-import org.activiti.engine.RepositoryService;
-import org.activiti.engine.RuntimeService;
+import org.activiti.engine.*;
 import org.activiti.engine.repository.Deployment;
 import org.activiti.engine.repository.DeploymentBuilder;
 import org.activiti.engine.runtime.ProcessInstance;
@@ -49,6 +46,15 @@ public class VacationProcess {
         // 对应的act_re_procdef
         ProcessInstance word = processEngine.getRuntimeService().startProcessInstanceByKey("HelloWord");
         System.out.println("启动流程实列:" + word.getId());
+
+    }
+
+    /**
+     * 获取流程变量
+     */
+    @Test
+    public void getVarables() {
+        TaskService taskService = processEngine.getTaskService();
 
     }
 }

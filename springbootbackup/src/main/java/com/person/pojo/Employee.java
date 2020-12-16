@@ -1,6 +1,8 @@
 package com.person.pojo;
 
+import com.alibaba.druid.support.monitor.annotation.MTable;
 import lombok.Data;
+import org.springframework.data.relational.core.mapping.Table;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,7 +12,7 @@ import org.springframework.stereotype.Component;
  * @version v1.0
  * @create 2019/11/28/11:06
  */
-@Data
+@Table()
 // @TableName("employee")
 public class Employee {
     private Integer id;
